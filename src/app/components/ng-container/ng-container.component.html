@@ -1,0 +1,42 @@
+<div class="ng-containers">
+  <h2 class="defination">
+    The ng-container is a powerful and versatile feature in Angular. It's often
+    used to group and structure content without adding any extra elements to the
+    DOM.
+  </h2>
+
+  <ng-container> This is the ng-container content </ng-container>
+
+  <ng-container *ngTemplateOutlet="estimateTemplate; context: ctx">
+  </ng-container>
+
+  <ng-template #estimateTemplate let-lessonsCounter="estimate">
+    <div>Approximately {{ lessonsCounter }} lessons ...</div>
+  </ng-template>
+
+  <ng-template #myContextTemplate let-item="item">
+    <p class="paragraph">This is myContextTemplate {{ item.name }}</p>
+  </ng-template>
+
+  <ng-container
+    *ngTemplateOutlet="myContextTemplate; context: myContext"
+  ></ng-container>
+
+  <ng-template #templateForm>
+    <form action="#" class="form">
+      <div class="form-group">
+        <label for="name" class="form__label">Name</label>
+        <input
+          type="text"
+          id="name"
+          class="form__input"
+          placeholder="name..."
+        />
+      </div>
+    </form>
+  </ng-template>
+
+  <ng-container *ngTemplateOutlet="templateForm"></ng-container>
+
+  <button class="btn" (click)="printTemplate()">Click me</button>
+</div>

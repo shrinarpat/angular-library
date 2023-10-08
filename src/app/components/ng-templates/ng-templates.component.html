@@ -1,0 +1,50 @@
+<div class="ng-templates">
+  <h2 class="defination">
+    ng-template is a powerful Angular directive used for defining templates that
+    can be rendered conditionally or dynamically within your components. It
+    allows you to create reusable parts of your UI that can be displayed or
+    hidden as needed.
+  </h2>
+  <!-- ngIf example -->
+  <button class="btn" (click)="toggleOn = !toggleOn">Toggle Visibility</button>
+
+  <ng-template [ngIf]="toggleOn">
+    <div class="toggle-content">This is for toggle content</div>
+  </ng-template>
+
+  <ng-template #template1>
+    <p class="paragraph">This is the angular ng-template 1</p>
+  </ng-template>
+
+  <ng-template #template2>
+    <p class="paragraph">This is the angular ng-template 2</p>
+  </ng-template>
+
+  <div
+    class="template-host"
+    *ngIf="validTemplate; then template1; else template2"
+  ></div>
+
+  <ng-template #template3>
+    <p class="paragraph">
+      Template 3, Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+      Provident quo ipsam aliquid ab tempora nobis soluta est neque perferendis
+      eum?
+    </p>
+  </ng-template>
+
+  <ng-container [ngTemplateOutlet]="template3"></ng-container>
+
+  <!-- ngFor example -->
+
+  <div class="name" *ngFor="let name of names">{{ name }}</div>
+
+  <!-- NgSwitch -->
+
+  <div [ngSwitch]="age">
+    <span *ngSwitchCase="25">25 Year old</span>
+    <span *ngSwitchCase="35">35 Year old</span>
+    <span *ngSwitchCase="45">45 Year old</span>
+    <span *ngSwitchCase="55">55 Year old</span>
+  </div>
+</div>

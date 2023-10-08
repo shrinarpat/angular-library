@@ -1,0 +1,100 @@
+<!-- <div class="reactive-form">
+  <form [formGroup]="register" class="form" (ngSubmit)="handleReactiveForm()">
+    <h2 class="form__caption">Reactive Forms</h2>
+    <div class="form-group">
+      <label for="firstname" class="form__label">Firstname: </label>
+      <input
+        type="text"
+        formControlName="firstname"
+        class="form__input"
+        id="firstname"
+        name="firstname"
+        placeholder="firstname"
+      />
+      <div
+        class="error"
+        *ngIf="
+          register.get('firstname')?.invalid &&
+          register.get('firstname')?.touched
+        "
+      >
+        <span
+          class="form__error-message"
+          *ngIf="register.get('firstname')?.errors?.['required']"
+          >Firstname is a required field</span
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lastname" class="form__label">Lastname: </label>
+      <input
+        type="text"
+        formControlName="lastname"
+        name="lastname"
+        placeholder="lastname"
+        class="form__input"
+        id="lastname"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email" class="form__label">Email </label>
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="email"
+        name="email"
+        class="form__input"
+        id="email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password" class="form__label">Password: </label>
+      <input
+        type="text"
+        formControlName="password"
+        name="password"
+        placeholder="password"
+        class="form__input"
+        id="password"
+      />
+    </div>
+    <div class="form-group">
+      <label for="passwordConfirm" class="form__label"
+        >Re-enter Password:
+      </label>
+      <input
+        type="text"
+        formControlName="passwordConfirm"
+        name="passwordConfirm"
+        placeholder="Re-enter password"
+        class="form__input"
+        id="passwordConfirm"
+      />
+    </div>
+    <div class="form-group">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [class.disabled]="register.invalid"
+        [disabled]="register.invalid"
+      >
+        Register
+      </button>
+    </div>
+  </form>
+</div> -->
+
+<!-- <form (ngSubmit)="updateUserName()" class="form">
+    <label for="updateName" class="form__label">Update Name: </label>
+    <input type="text" [formControl]="updateName" class="form__input" id="updateName" />
+    <button type="submit" class="btn btn-primary">Update Name</button>
+  </form>
+
+<div class="form">
+  <label for="name" class="form__label">Name: </label>
+  <input type="text" [formControl]="name" class="form__input" id="name" />
+</div>
+
+<div class="paragraph">Name: {{ name.value }}</div> -->
+
+<app-profile-editor></app-profile-editor>

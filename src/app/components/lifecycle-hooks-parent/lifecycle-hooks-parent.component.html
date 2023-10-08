@@ -1,0 +1,15 @@
+<div class="lifecyle-hooks">
+  <h2 class="heading">This is the parent component</h2>
+  <button class="btn btn-primary" (click)="counter()">Counter</button>
+
+
+  <app-lifecycle-hooks-child
+    [count]="count"
+    [counterChange]="isCounterChange"
+    [user]="user"
+  >
+    <app-lifecycle-hooks-child-sibling
+      [message]="message"
+    ></app-lifecycle-hooks-child-sibling>
+  </app-lifecycle-hooks-child>
+</div>

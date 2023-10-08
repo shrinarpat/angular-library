@@ -1,0 +1,88 @@
+<form [formGroup]="profileForm" class="form" (onSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="firstname" class="form__label">Firstname: </label>
+    <input
+      type="text"
+      formControlName="firstname"
+      class="form__input"
+      id="firstname"
+    />
+    <div
+      class="form__error-message"
+      *ngIf="
+        profileForm.get('firstname')?.invalid &&
+        profileForm.get('firstname')?.touched
+      "
+    >
+      <span>{{ titleError | json }}</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="lastname" class="form__label">Lastname: </label>
+    <input
+      type="text"
+      formControlName="lastname"
+      class="form__input"
+      id="lastname"
+    />
+  </div>
+
+  <div class="form-group" formGroupName="address">
+    <h2 class="heading-secondary">Address:</h2>
+    <div class="form-group">
+      <label for="street" class="form__label">Street: </label>
+      <input
+        type="text"
+        formControlName="street"
+        class="form__input"
+        id="street"
+      />
+    </div>
+    <div class="form-group">
+      <label for="city" class="form__label">City: </label>
+      <input type="text" formControlName="city" class="form__input" id="city" />
+    </div>
+    <div class="form-group">
+      <label for="state" class="form__label">State: </label>
+      <input
+        type="text"
+        formControlName="state"
+        class="form__input"
+        id="state"
+      />
+    </div>
+    <div class="form-group">
+      <label for="zip" class="form__label">Zip: </label>
+      <input type="text" formControlName="zip" class="form__input" id="zip" />
+    </div>
+  </div>
+
+  <!-- <div class="form-group" formArrayName="aliases">
+    <h2 class="heading-secondary">Aliases</h2>
+    <button type="button" class="btn btn-secondary" (click)="addAlias()">+ Add new alias</button>
+
+    <div class="form-group" *ngFor="let alias of aliases.controls; let i = index">
+      <label class="form__label" for="alias-{{i}}">Alias: </label>
+      <input type="text" id="alias-{{i}}" class="form__input" [formControlName]="i">
+    </div>
+  </div> -->
+
+  <div class="form-group">
+    <button
+      type="button"
+      class="btn btn-primary"
+      [class.disabled]="profileForm.invalid"
+      [disabled]="profileForm.invalid"
+    >
+      Submit
+    </button>
+  </div>
+</form>
+
+<div class="values">
+  <!-- <button type="button" class="btn btn-primary" (click)="updateForm()">
+    Update
+  </button> -->
+  {{ profileForm.errors | json }}
+</div>

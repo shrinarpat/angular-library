@@ -1,0 +1,57 @@
+<div class="container">
+  <ul class="list">
+    <li
+      *ngFor="
+        let user of users;
+        index as index;
+        first as f;
+        last as l;
+        even as even;
+        odd as odd
+      "
+      class="list__item"
+    >
+      {{ user }} - {{ index }} - {{ f }} - {{ l }} {{ even }} - {{ odd }}
+    </li>
+  </ul>
+
+  <table class="table">
+    <tr class="table__row table__heading">
+      <th class="table__cell">Index</th>
+      <th class="table__cell">Name</th>
+      <th class="table__cell">Age</th>
+      <th class="table__cell">DOB</th>
+      <th class="table__cell">Email</th>
+      <th class="table__cell">Is First</th>
+      <th class="table__cell">Is Last</th>
+      <th class="table__cell">Is Even</th>
+      <th class="table__cell">Is Odd</th>
+    </tr>
+    <tr
+      *ngFor="
+        let employee of employeeList;
+        index as index;
+        first as first;
+        last as last;
+        even as even;
+        odd as odd;
+        trackBy: trackRefresh
+      "
+      class="table__row"
+    >
+      <td class="table__cell">{{ index }}</td>
+      <td class="table__cell">{{ employee.name }}</td>
+      <td class="table__cell">{{ employee.age }}</td>
+      <td class="table__cell">{{ employee.dob }}</td>
+      <td class="table__cell">{{ employee.email }}</td>
+      <td class="table__cell">{{ first }}</td>
+      <td class="table__cell">{{ last }}</td>
+      <td class="table__cell">{{ even }}</td>
+      <td class="table__cell">{{ odd }}</td>
+    </tr>
+  </table>
+
+  <button class="btn" (click)="refreshEmployeeList()">
+    Refresh Employee List
+  </button>
+</div>

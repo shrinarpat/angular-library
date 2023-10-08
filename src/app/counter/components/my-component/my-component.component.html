@@ -1,0 +1,9 @@
+<div class="box">
+  <h1 class="heading-primary">{{ counter$ | async }}</h1>
+  <!-- <h1 class="heading-primary">{{ (counter$ | async)?.counter }}</h1> -->
+  <button class="btn btn-primary" (click)="increment()">Increment</button>
+  <button class="btn btn-warning" (click)="decrement()">Decrement</button>
+  <button class="btn btn-info" (click)="reset()">Reset</button>
+
+  <app-custom-input></app-custom-input>
+</div>

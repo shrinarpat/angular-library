@@ -1,0 +1,28 @@
+<div class="lifecycle-child">
+  <h1>
+    {{ childCounter }}
+  </h1>
+
+  <button class="btn btn-primary" (click)="increaseCount()">Increase count</button>
+
+  <h3 class="heading" #headingOne>
+    This is the child component with counter1 value: {{ count }}
+  </h3>
+
+  <h3 class="heading">
+    This is the child component with counterChange value: {{ counterChange }}
+  </h3>
+
+  <div class="user">
+    <p>User id is: {{ user.id }}</p>
+    <p>User name is: {{ user.name }}</p>
+  </div>
+
+  <!-- Using this for content projection to test the ngAfterContentInit and ngAfterContentCheck hooks -->
+  <!-- <ng-content></ng-content> -->
+
+  <!-- Using this to test the ngAfterViewCheck -->
+  <app-lifecycle-hooks-child-sibling
+    [message]="message"
+  ></app-lifecycle-hooks-child-sibling>
+</div>

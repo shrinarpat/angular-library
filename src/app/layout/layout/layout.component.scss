@@ -1,0 +1,12 @@
+.layout {
+  display: flex;
+}
+
+.main {
+  font-size: 2rem;
+  width: 85vw;
+  background-color: var(--color-grey-light-1);
+  padding: 3.5rem 2.5rem;
+
+  min-height: 50rem;
+}

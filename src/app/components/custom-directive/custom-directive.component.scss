@@ -1,0 +1,42 @@
+@mixin btn-style {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  margin: 2rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.custom-directives {
+  & * {
+    margin-bottom: 2rem;
+  }
+}
+
+.btn {
+  @include btn-style;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: var(--color-grey-dark-2);
+  color: #fff;
+}
+
+.logged-in {
+  background-color: var(--color-grey-dark-2);
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  padding: 2rem;
+}
+
+.logged-out {
+  background-color: yellowgreen;
+  color: var(--color-grey-light-1);
+  font-size: 1.4rem;
+  padding: 2rem;
+}

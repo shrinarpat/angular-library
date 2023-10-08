@@ -1,0 +1,20 @@
+<div class="pipes">
+  <h2 class="defination">
+    Angular pipes are used in template expressions, denoted by the | symbol, to
+    apply transformations to values. Pipes can be used to format data for
+    presentation, filter lists, sort arrays, and perform various other
+    operations without modifying the underlying data.
+  </h2>
+
+  <div class="built-in-pipes">
+    <h3>Built in pipes</h3>
+    <h4>{{ product | uppercase }}</h4>
+    <p>{{ price | currency : "EUR" : "symbol" }}</p>
+    <p>{{ release_date | date : "fullDate" }}</p>
+    <p>{{ meta_data | json }}</p>
+  </div>
+
+  <div class="custom-pipe">
+    <p> {{ dob | agePipe}} </p>
+  </div>
+</div>

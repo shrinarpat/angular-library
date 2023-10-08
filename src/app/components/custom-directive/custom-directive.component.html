@@ -1,0 +1,56 @@
+<div class="custom-directives">
+  <h2 class="defination">
+    Custom directives in Angular allow you to create your own reusable and
+    extendable behavior for DOM elements. They are a fundamental building block
+    for adding new functionality to your Angular applications.
+  </h2>
+
+  <!-- 
+        appHoverHighlight is basically instantiating the HoverHighlightDirective class
+        Possible code under the hood will be like this: 
+
+        const appHoverHighlight = new HoverHighlightDirective()
+
+    
+    -->
+  <div class="context-box" [appHoverHighlight]="backgroundColor">
+    This is host element of custom hover directive
+  </div>
+
+  <button class="btn btn-primary" (click)="backgroundColor = 'blue'">
+    Change Color
+  </button>
+
+  <div>
+    <h3>
+      ngClass allows you to dynamically add or remove CSS classes from elements
+      based on conditions or expressions.
+    </h3>
+    <h3>
+      ngStyle allows you to dynamically set inline CSS styles on elements based
+      on conditions or expressions.
+    </h3>
+    <p>
+      Both directives are powerful tools for creating dynamic and responsive UIs
+      in Angular applications, allowing you to control the styling of your
+      elements based on various factors such as user interactions, component
+      state, or data-driven conditions.
+    </p>
+  </div>
+
+  <div [ngClass]="isLoggedIn ? 'logged-in' : 'logged-out'">
+    {{ isLoggedIn ? "You are logged In" : "Your are logged out" }}
+  </div>
+
+  <div [ngClass]="{ 'logged-in': isLoggedIn, 'logged-out': !isLoggedIn }">
+    {{ isLoggedIn ? "You are logged In" : "Your are logged out" }}
+  </div>
+
+  <div [ngStyle]="{'background-color': isLoggedIn ? 'green' : 'red'}">This styling is done using ngStyle directive</div>
+
+  <button class="btn btn-secondary" (click)="isLoggedIn = !isLoggedIn">
+    Change Color
+  </button>
+
+
+</div>

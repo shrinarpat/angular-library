@@ -1,0 +1,20 @@
+<div class="container">
+  <h2 class="heading-secondary">App name: {{ appName$ | async }}</h2>
+  <button
+    class="btn btn-primary margin-bottom-large"
+    (click)="handleAppNameChange()"
+  >
+    Update the App Name
+  </button>
+  <input
+    type="text"
+    name="custom-value"
+    id="custom-value"
+    class="input"
+    placeholder="enter value"
+    [(ngModel)]="customValue"
+  />
+  <button class="btn btn-secondary" (click)="addValue()">
+    Custom Increment
+  </button>
+</div>

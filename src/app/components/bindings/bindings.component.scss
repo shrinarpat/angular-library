@@ -1,0 +1,41 @@
+@import "../../../scss/mixins";
+
+$shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+
+.binding-box {
+  padding: 2rem 4rem;
+  box-shadow: $shadow;
+  background-color: var(--color-white);
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+.message {
+  font-size: 1.6rem;
+  padding: 2rem 4rem;
+
+  &__morning {
+    background-color: orange;
+    color: black;
+  }
+
+  &__evening {
+    background-color: rgb(32, 32, 245);
+    color: var(--color-white);
+  }
+}
+
+.btn {
+  @include btnStyle;
+  margin: 2rem 0rem;
+  background-color: var(--primary-color);
+  color: var(--color-white);
+}

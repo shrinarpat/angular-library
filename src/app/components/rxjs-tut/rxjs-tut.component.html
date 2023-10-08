@@ -1,0 +1,123 @@
+<div class="rxjs-operators">
+  <h1 class="heading-primary">Rxjs Operators</h1>
+  <p class="paragraph u-margin-bottom-medium">{{ items | json }}</p>
+  <div class="rxjs-operators__box">
+    <h2 class="heading-secondary">map Operator</h2>
+    <p class="paragraph">
+      perform operations on each value emitted from the observable
+    </p>
+    <input
+      type="text"
+      name="price"
+      id="price"
+      class="input"
+      [(ngModel)]="itemPrice"
+    />
+    <button type="button" class="btn btn-primary" (click)="calculatePrice()">
+      Calculate
+    </button>
+  </div>
+
+  <div class="rxjs-operators__box">
+    <h2 class="heading-secondary">filter Operator</h2>
+    <p class="paragraph">
+      Check each value and every emitted value from observable and filter them
+      based on the provided conditions
+    </p>
+    <input
+      type="text"
+      name="price"
+      id="price"
+      class="input"
+      [(ngModel)]="filterCondition"
+    />
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="filterItemByQuantity()"
+    >
+      Calculate
+    </button>
+  </div>
+
+  <div class="rxjs-operators__box">
+    <h2 class="heading-secondary">take Operator</h2>
+    <p class="paragraph">
+      take operator will limit the emission of values to number we specify in
+      the take
+    </p>
+    <input
+      type="text"
+      name="price"
+      id="price"
+      class="input"
+      [(ngModel)]="takeItemCount"
+    />
+    <button type="button" class="btn btn-primary" (click)="takeItem()">
+      Calculate
+    </button>
+  </div>
+
+  <div class="rxjs-operators__box">
+    <h2 class="heading-secondary">interval Operator</h2>
+    <p class="paragraph">
+      interval operator generate sequential number at specified interval
+    </p>
+    <input
+      type="text"
+      name="price"
+      id="price"
+      class="input"
+      [(ngModel)]="timeInterval"
+    />
+    <button type="button" class="btn btn-primary" (click)="generateNumber()">
+      Generate
+    </button>
+  </div>
+
+  <div class="rxjs-operators__box">
+    <h2 class="heading-secondary">mergeMap Operator</h2>
+    <p class="paragraph">
+      the mergeMap operator is used to transform the values emitted by an
+      observable into other observables, and then it flattens those inner
+      observables into a single observable stream.
+    </p>
+    <button type="button" class="btn btn-primary" (click)="getUsers()">
+      Get User
+    </button>
+  </div>
+
+  <div class="rxjs-operators__box">
+    <h2 class="heading-secondary">switchMap Operator</h2>
+    <p class="paragraph">
+      the switchMap operator is used to generate a new observable for each new
+      value and unsubscribe all the previous observables.
+    </p>
+    <input
+      type="text"
+      name="userId"
+      id="price"
+      class="input"
+      [(ngModel)]="userId"
+      (keyup)="getResults()"
+    />
+    <button type="button" class="btn btn-primary" (click)="getResults()">
+      Get New Results
+    </button>
+  </div>
+
+  <div class="rxjs-operators__box">
+    <h2 class="heading-secondary">switchMap Operator</h2>
+    <p class="paragraph">
+      the switchMap operator is used to generate a new observable for each new
+      value and unsubscribe all the previous observables.
+    </p>
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="generateObservable()"
+    >
+      Subscribe
+    </button>
+  </div>
+</div>

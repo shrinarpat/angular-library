@@ -1,0 +1,37 @@
+<div class="container">
+  <h2 class="heading-secondary">
+    Observable creation function - of, from, interval, fromEvent
+  </h2>
+
+  <input
+    type="text"
+    class="input"
+    name="search"
+    id="search"
+    placeholder="Search Products"
+    #searchInput
+  />
+
+  <ul>
+    <li *ngFor="let item of searchObs$ | async">
+      {{ item.title }}
+    </li>
+  </ul>
+
+  <button type="button" (click)="fromMarks()" class="btn btn-primay">
+    From Marks
+  </button>
+
+  <button type="button" (click)="fromInterval()" class="btn btn-secondary">
+    From Interval
+  </button>
+
+  <button type="button" class="btn btn-primay" #btnEvent>From Event</button>
+
+  <button type="button" class="btn btn-primay" (click)="runExampleOne()">
+    Run Example One
+  </button>
+  <button type="button" class="btn btn-primay" (click)="achieveResult()">
+    Achieve Result
+  </button>
+</div>

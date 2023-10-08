@@ -1,0 +1,20 @@
+<div class="ng-content">
+  <h2>
+    ng-content is an Angular directive used for content projection. It allows
+    you to insert and project content from the parent component's template into
+    a child component's template. This is particularly useful when you want to
+    create reusable components with flexible layouts and content.
+  </h2>
+  <app-ng-contents-child>
+    <div slot="header">
+      <h1>This is the header</h1>
+    </div>
+    <h3>This content is coming from parent!</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam suscipit
+      aliquam in magnam iste neque architecto minus rerum itaque vitae.
+    </p>
+
+    <div slot="footer">This is the footer</div>
+  </app-ng-contents-child>
+</div>

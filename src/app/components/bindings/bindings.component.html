@@ -1,0 +1,24 @@
+<div class="binding">
+  <div class="binding-box">
+    <h2 class="heading-secondary">
+      Class binding - Adding or removing a class from the html element based on
+      the conditions
+    </h2>
+    <p
+      class="message"
+      [class]="{ message__morning: isMorning, message__evening: !isMorning }"
+    >
+      {{ isMorning ? morningMessage : eveningMessage }}
+    </p>
+    <button class="btn" (click)="isMorning = !isMorning">Toggle</button>
+  </div>
+
+  <div class="binding-box">
+    <h2 class="heading-secondary">
+      Attribute Binding - We can use the attribute binding to set the value of
+      non-standard attributes or custom attributes - We have to use
+      <b>attr</b> before attribute name
+    </h2>
+    <img [attr.src]="logo" alt="Angular logo" [attr.width]="logoWidth">
+  </div>
+</div>

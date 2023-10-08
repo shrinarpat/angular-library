@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #eb2f64;
+  --primary-light-color: #ff3366;
+  --primary-dark-color: #ba265d;
+
+  --color-warning: hsla(57, 95%, 57%, 0.9);
+  --color-warning-light: hsla(57, 95%, 57%, 0.8);
+  --color-warning-dark: hsla(57, 95%, 57%, 1);
+
+  --color-info: hsla(199, 88%, 55%, 0.9);
+  --color-info-light: hsla(199, 88%, 55%, 0.8);;
+  --color-info-dark: hsla(199, 88%, 55%, 1);;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --color-white: #fff;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 1rem 4rem rgba(0, 0, 0, 0.6);
+
+  --line: 1px solid var(--color-grey-light-2);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-grey-dark-3);
+}
+
+// mixin
